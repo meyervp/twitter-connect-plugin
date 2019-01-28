@@ -7,14 +7,12 @@ var TwitterConnect = {
 	logout: function (successCallback, errorCallback) {
 		exec(successCallback, errorCallback, 'TwitterConnect', 'logout', []);
 	},
-	showUser: function (args, successCallback, errorCallback) {
-		exec(successCallback, errorCallback, 'TwitterConnect', 'showUser', [{"include_entities" : args.include_entities}]);
+	showUser: function (successCallback, errorCallback) {
+		exec(successCallback, errorCallback, 'TwitterConnect', 'showUser', []);
 	},
-	verifyCredentials: function (args, successCallback, errorCallback) {
-		exec(successCallback, errorCallback, 'TwitterConnect', 'verifyCredentials', [{"include_entities" : args.include_entities,
-																					"skip_status" : args.skip_status,
-																					"include_email" : args.include_email}]);
-	},
+    verifyCredentials: function (successCallback, errorCallback) {
+        exec(successCallback, errorCallback, 'TwitterConnect', 'verifyCredentials', []);
+    },
 	sendTweet: function (msg, successCallback, errorCallback) {
 		exec(successCallback, errorCallback, 'TwitterConnect', 'sendTweet', [{"status" : msg}]);
 	},
